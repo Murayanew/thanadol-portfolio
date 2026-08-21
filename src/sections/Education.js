@@ -9,11 +9,11 @@ export function Education() {
     const badgeColor = badgeColors[idx % badgeColors.length];
 
     const periodHtml = stage.period && stage.period.trim() !== ''
-      ? `<span class="inline-block px-3 py-1 text-xs font-black border-2 border-black ${badgeColor} shadow-[2px_2px_0px_#000] font-mono mb-4 uppercase">${stage.period}</span>`
+      ? `<span class="inline-block px-3 py-1 text-[10px] sm:text-xs font-black border-2 border-black ${badgeColor} shadow-[2px_2px_0px_#000] font-mono mb-3 md:mb-4 uppercase w-fit">${stage.period}</span>`
       : '';
 
     return `
-      <div class="relative flex flex-col items-center text-center px-2 flex-1 group">
+      <div class="relative flex flex-row md:flex-col items-start md:items-center text-left md:text-center px-1 md:px-2 flex-1 group gap-4 md:gap-0 w-full">
         
         <!-- Connection Line (Desktop) -->
         ${idx < educations.length - 1 ? `
@@ -21,22 +21,22 @@ export function Education() {
         ` : ''}
         
         <!-- Badge Number -->
-        <div class="relative w-12 h-12 rounded-full bg-pop-pink border-3 border-black flex items-center justify-center mb-6 z-10 shadow-[3px_3px_0px_#000] font-heading font-black text-white text-lg group-hover:bg-pop-yellow group-hover:text-black transition duration-150">
+        <div class="relative w-12 h-12 flex-shrink-0 rounded-full bg-pop-pink border-3 border-black flex items-center justify-center mb-0 md:mb-6 z-10 shadow-[3px_3px_0px_#000] font-heading font-black text-white text-lg group-hover:bg-pop-yellow group-hover:text-black transition duration-150">
           ${idx + 1}
         </div>
 
         <!-- Scrapbook Polaroid Card -->
-        <div class="polaroid-card ${tilt} bg-paper-cream text-black border-4 border-black p-6 rounded-none w-full shadow-pop-black cursor-pointer">
+        <div class="polaroid-card ${tilt} bg-paper-cream text-black border-4 border-black p-5 sm:p-6 rounded-none flex-grow md:w-full shadow-pop-black cursor-pointer">
           ${periodHtml}
-          <h3 class="text-lg md:text-xl font-heading font-black tracking-wide text-black uppercase mb-2 leading-tight">${stage.school}</h3>
-          <p class="text-sm text-slate-800 font-semibold leading-relaxed">${stage.degree}</p>
+          <h3 class="text-base sm:text-lg md:text-xl font-heading font-black tracking-wide text-black uppercase mb-1 md:mb-2 leading-tight">${stage.school}</h3>
+          <p class="text-xs sm:text-sm text-slate-800 font-semibold leading-relaxed">${stage.degree}</p>
         </div>
       </div>
     `;
   }).join('');
 
   return `
-    <section id="education" class="py-24 border-b-4 border-black bg-bg-primary relative overflow-hidden">
+    <section id="education" class="py-16 md:py-24 border-b-4 border-black bg-bg-primary relative overflow-hidden">
       <!-- Decorative checkerboard background element -->
       <div class="absolute bottom-[-16px] left-0 w-full h-8 bg-checkerboard-red border-t-4 border-black opacity-10"></div>
       
@@ -52,9 +52,10 @@ export function Education() {
         </div>
 
         <!-- Timeline Container (Horizontal on Desktop, Vertical on Mobile) -->
-        <div class="flex flex-col md:flex-row gap-12 md:gap-4 relative">
+        <div class="flex flex-col md:flex-row gap-10 md:gap-4 relative w-full">
           <!-- Connection Line (Mobile) -->
-          <div class="md:hidden absolute top-6 bottom-6 left-[24px] w-1 bg-black z-0"></div>
+          <!-- w-12 is 48px, half is 24px + 6px padding offset = 30px from left -->
+          <div class="md:hidden absolute top-6 bottom-6 left-[28px] w-1 bg-black z-0"></div>
           
           <div class="flex flex-col md:flex-row w-full gap-10 md:gap-4 md:items-start">
             ${itemsHtml}
@@ -65,3 +66,4 @@ export function Education() {
     </section>
   `;
 }
+

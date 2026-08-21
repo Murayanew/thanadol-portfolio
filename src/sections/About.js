@@ -72,7 +72,7 @@ export function About() {
   }).join('');
 
   return `
-    <section id="about" class="py-24 border-b-4 border-black bg-bg-primary relative">
+    <section id="about" class="py-16 md:py-24 border-b-4 border-black bg-bg-primary relative">
       <!-- Scrapbook Grid Lines -->
       <div class="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.015)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.015)_1px,transparent_1px)] bg-[size:20px_20px] pointer-events-none"></div>
 
@@ -104,7 +104,7 @@ export function About() {
               <h3 class="font-heading font-black text-xl tracking-wider uppercase">// SOFTWARE SKILLS</h3>
             </div>
             
-            <div class="grid grid-cols-3 gap-4">
+            <div class="grid grid-cols-2 sm:grid-cols-3 gap-4">
               ${skillBadges}
             </div>
           </div>
@@ -112,5 +112,6 @@ export function About() {
         </div>
       </div>
     </section>
+
   `;
 }

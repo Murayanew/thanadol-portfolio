@@ -2,7 +2,7 @@ import { profile } from '../data/profile.js';
 
 export function Contact() {
   return `
-    <section id="contact" class="py-24 border-b-4 border-black bg-bg-primary relative overflow-hidden">
+    <section id="contact" class="py-16 md:py-24 border-b-4 border-black bg-bg-primary relative overflow-hidden">
       <!-- Background decorative checkerboard strip -->
       <div class="absolute bottom-0 left-0 w-full h-8 bg-checkerboard-yellow border-t-4 border-black opacity-10"></div>
       
@@ -19,13 +19,13 @@ export function Contact() {
         <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-start">
           
           <!-- Contact Channels with Copy Buttons (Scrapbook cards) -->
-          <div class="space-y-6">
+          <div class="space-y-6 w-full">
             <h3 class="font-heading font-black text-xl tracking-wider text-pop-pink text-shadow-pop-black mb-6 uppercase">// CHANNELS</h3>
             
             <!-- Phone Card -->
-            <div class="polaroid-card polaroid-left-slight bg-paper-cream border-4 border-black p-5 shadow-pop-black flex items-center justify-between gap-4 cursor-pointer text-black">
+            <div class="polaroid-card polaroid-left-slight bg-paper-cream text-black border-4 border-black p-5 shadow-pop-black flex flex-col sm:flex-row sm:items-center justify-between gap-4 cursor-pointer text-black w-full">
               <div class="flex items-center gap-4">
-                <div class="w-12 h-12 border-2 border-black bg-pop-yellow flex items-center justify-center text-black shadow-[2px_2px_0px_#000] font-heading font-black">
+                <div class="w-12 h-12 flex-shrink-0 border-2 border-black bg-pop-yellow flex items-center justify-center text-black shadow-[2px_2px_0px_#000] font-heading font-black">
                   📞
                 </div>
                 <div>
@@ -34,7 +34,7 @@ export function Contact() {
                 </div>
               </div>
               <button 
-                class="copy-btn px-4 py-2 bg-pop-pink text-black border-2 border-black font-heading font-black text-xs shadow-[2px_2px_0px_#000] hover:bg-pop-yellow hover:scale-105 transition duration-150 cursor-pointer"
+                class="copy-btn w-full sm:w-auto text-center flex items-center justify-center px-4 py-2.5 bg-pop-pink text-black border-2 border-black font-heading font-black text-xs shadow-[2px_2px_0px_#000] hover:bg-pop-yellow hover:scale-105 transition duration-150 cursor-pointer"
                 data-copy-target="phone-text"
               >
                 คัดลอก
@@ -42,18 +42,18 @@ export function Contact() {
             </div>
 
             <!-- Email Card -->
-            <div class="polaroid-card polaroid-right-slight bg-paper-cream border-4 border-black p-5 shadow-pop-black flex items-center justify-between gap-4 cursor-pointer text-black">
+            <div class="polaroid-card polaroid-right-slight bg-paper-cream text-black border-4 border-black p-5 shadow-pop-black flex flex-col sm:flex-row sm:items-center justify-between gap-4 cursor-pointer text-black w-full">
               <div class="flex items-center gap-4">
-                <div class="w-12 h-12 border-2 border-black bg-pop-pink flex items-center justify-center text-white shadow-[2px_2px_0px_#000] font-heading font-black">
+                <div class="w-12 h-12 flex-shrink-0 border-2 border-black bg-pop-pink flex items-center justify-center text-white shadow-[2px_2px_0px_#000] font-heading font-black">
                   ✉️
                 </div>
-                <div>
+                <div class="min-w-0 flex-grow">
                   <span class="text-[10px] text-pop-navy font-black uppercase tracking-wider block">อีเมล</span>
-                  <span class="text-sm md:text-base text-black font-mono font-black" id="email-text">${profile.email}</span>
+                  <span class="text-sm sm:text-base text-black font-mono font-black break-all" id="email-text">${profile.email}</span>
                 </div>
               </div>
               <button 
-                class="copy-btn px-4 py-2 bg-pop-yellow text-black border-2 border-black font-heading font-black text-xs shadow-[2px_2px_0px_#000] hover:bg-pop-pink hover:scale-105 transition duration-150 cursor-pointer"
+                class="copy-btn w-full sm:w-auto text-center flex items-center justify-center px-4 py-2.5 bg-pop-yellow text-black border-2 border-black font-heading font-black text-xs shadow-[2px_2px_0px_#000] hover:bg-pop-pink hover:scale-105 transition duration-150 cursor-pointer"
                 data-copy-target="email-text"
               >
                 คัดลอก
@@ -61,9 +61,9 @@ export function Contact() {
             </div>
 
             <!-- LINE Card -->
-            <div class="polaroid-card polaroid-left-slight bg-paper-cream border-4 border-black p-5 shadow-pop-black flex items-center justify-between gap-4 cursor-pointer text-black">
+            <div class="polaroid-card polaroid-left-slight bg-paper-cream text-black border-4 border-black p-5 shadow-pop-black flex flex-col sm:flex-row sm:items-center justify-between gap-4 cursor-pointer text-black w-full">
               <div class="flex items-center gap-4">
-                <div class="w-12 h-12 border-2 border-black bg-pop-cyan flex items-center justify-center text-black shadow-[2px_2px_0px_#000] font-heading font-black">
+                <div class="w-12 h-12 flex-shrink-0 border-2 border-black bg-pop-cyan flex items-center justify-center text-black shadow-[2px_2px_0px_#000] font-heading font-black">
                   💬
                 </div>
                 <div>
@@ -72,7 +72,7 @@ export function Contact() {
                 </div>
               </div>
               <button 
-                class="copy-btn px-4 py-2 bg-pop-pink text-black border-2 border-black font-heading font-black text-xs shadow-[2px_2px_0px_#000] hover:bg-pop-yellow hover:scale-105 transition duration-150 cursor-pointer"
+                class="copy-btn w-full sm:w-auto text-center flex items-center justify-center px-4 py-2.5 bg-pop-pink text-black border-2 border-black font-heading font-black text-xs shadow-[2px_2px_0px_#000] hover:bg-pop-yellow hover:scale-105 transition duration-150 cursor-pointer"
                 data-copy-target="line-text"
               >
                 คัดลอก
@@ -82,21 +82,21 @@ export function Contact() {
           </div>
 
           <!-- Social links / Creative handles -->
-          <div class="polaroid-card polaroid-right-slight bg-paper-cream border-4 border-black p-6 md:p-8 shadow-pop-navy text-black cursor-pointer">
+          <div class="polaroid-card polaroid-right-slight bg-paper-cream border-4 border-black p-6 md:p-8 shadow-pop-navy text-black cursor-pointer w-full">
             <h3 class="font-heading font-black text-xl tracking-wider text-black mb-6">// ONLINE PROFILES</h3>
             
             <p class="text-slate-800 text-sm md:text-base leading-relaxed mb-8 font-medium">
               สามารถรับชมผลงานวิดีโอเพิ่มเติม หรือพูดคุยแลกเปลี่ยนผลงานการสร้างสรรค์ของผมผ่านทางช่องทางโซเชียลมีเดียต่อไปนี้ได้ครับ
             </p>
 
-            <div class="grid grid-cols-2 gap-4">
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
               <!-- Instagram -->
               <a 
                 href="https://www.instagram.com/thanadol_newd/" 
                 target="_blank" 
                 class="flex items-center gap-3 p-4 bg-white hover:bg-pop-pink/10 border-2 border-black shadow-[3px_3px_0px_#000] hover:shadow-[1px_1px_0px_#000] hover:translate-x-0.5 hover:translate-y-0.5 transition duration-150"
               >
-                <div class="text-pop-pink">
+                <div class="text-pop-pink flex-shrink-0">
                   <svg class="w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                     <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
                     <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
@@ -112,7 +112,7 @@ export function Contact() {
                 target="_blank" 
                 class="flex items-center gap-3 p-4 bg-white hover:bg-pop-cyan/10 border-2 border-black shadow-[3px_3px_0px_#000] hover:shadow-[1px_1px_0px_#000] hover:translate-x-0.5 hover:translate-y-0.5 transition duration-150"
               >
-                <div class="text-pop-navy">
+                <div class="text-pop-navy flex-shrink-0">
                   <svg class="w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                     <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path>
                   </svg>
@@ -125,15 +125,18 @@ export function Contact() {
               <a 
                 href="https://www.youtube.com/@%E0%B8%81%E0%B8%B8%E0%B9%8A%E0%B8%A2%E0%B9%82%E0%B8%9B%E0%B8%A3%E0%B8%94%E0%B8%B1%E0%B8%81%E0%B8%8A%E0%B8%B1%E0%B9%88%E0%B8%99" 
                 target="_blank" 
-                class="flex items-center gap-3 p-4 bg-white hover:bg-pop-red/10 border-2 border-black shadow-[3px_3px_0px_#000] hover:shadow-[1px_1px_0px_#000] hover:translate-x-0.5 hover:translate-y-0.5 transition duration-150"
+                class="flex items-center gap-3 p-4 bg-white hover:bg-pop-red/10 border-2 border-black shadow-[3px_3px_0px_#000] hover:shadow-[1px_1px_0px_#000] hover:translate-x-0.5 hover:translate-y-0.5 transition duration-150 col-span-1 sm:col-span-2"
               >
-                <div class="text-pop-red">
+                <div class="text-pop-red flex-shrink-0">
                   <svg class="w-6 h-6" viewBox="0 0 24 24" fill="currentColor">
                     <path d="M23.498 6.163a3.003 3.003 0 0 0-2.11-2.11C19.518 3.545 12 3.545 12 3.545s-7.518 0-9.388.508a3.003 3.003 0 0 0-2.11 2.11C0 8.033 0 12 0 12s0 3.967.502 5.837a3.003 3.003 0 0 0 2.11 2.11c1.87.508 9.388.508 9.388.508s7.518 0 9.388-.508a3.003 3.003 0 0 0 2.11-2.11C24 15.967 24 12 24 12s0-3.967-.502-5.837zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
                   </svg>
                 </div>
                 <span class="text-xs font-black tracking-wider text-black uppercase font-heading">กุ๊ย โปรดักชั่น</span>
               </a>
+            </div>
+          </div>
+
         </div>
       </div>
     </section>

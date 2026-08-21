@@ -126,7 +126,7 @@ export function CatalogSection(title, icon, items, gridId) {
 
 export function Portfolio(videoWorks, photoWorks) {
   return `
-    <section id="portfolio" class="py-24 border-b-4 border-black bg-bg-primary relative">
+    <section id="portfolio" class="py-16 md:py-24 border-b-4 border-black bg-bg-primary relative">
       <!-- Decorative background grids -->
       <div class="absolute top-0 left-0 w-full h-8 bg-checkerboard-red border-b-4 border-black opacity-10"></div>
       

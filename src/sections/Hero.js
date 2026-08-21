@@ -17,25 +17,25 @@ export function Hero() {
       </div>
 
       <!-- Checkerboard Background Strip (Top) -->
-      <div class="absolute top-12 left-0 w-full h-8 bg-checkerboard-red border-b-4 border-black z-0"></div>
+      <div class="absolute top-12 left-0 w-full h-6 sm:h-8 bg-checkerboard-red border-b-4 border-black z-0"></div>
 
       <!-- FLOATING STICKERS -->
       <!-- Star (Yellow) -->
-      <div class="absolute top-28 left-6 md:left-24 w-16 h-16 text-pop-yellow animate-float z-10 drop-shadow-[3px_3px_0px_#000]">
+      <div class="absolute top-24 left-4 md:left-24 w-10 h-10 sm:w-16 sm:h-16 text-pop-yellow animate-float z-10 drop-shadow-[2.5px_2.5px_0px_#000]">
         <svg viewBox="0 0 24 24" fill="currentColor" class="w-full h-full stroke-black stroke-[1.5]">
           <polygon points="12 2 15 9 22 9 17 14 19 21 12 17 5 21 7 14 2 9 9 9 12 2"/>
         </svg>
       </div>
 
       <!-- Lightning (Pink) -->
-      <div class="absolute top-36 right-6 md:right-32 w-12 h-20 text-pop-pink animate-float-delayed z-10 drop-shadow-[3px_3px_0px_#000]">
+      <div class="absolute top-28 right-4 md:right-32 w-8 h-12 sm:w-12 sm:h-20 text-pop-pink animate-float-delayed z-10 drop-shadow-[2.5px_2.5px_0px_#000]">
         <svg viewBox="0 0 24 24" fill="currentColor" class="w-full h-full stroke-black stroke-[1.5]">
           <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/>
         </svg>
       </div>
 
-      <!-- Smiley Face (Cyan) -->
-      <div class="absolute bottom-20 left-10 md:left-36 w-16 h-16 text-pop-cyan animate-float-delayed z-10">
+      <!-- Smiley Face (Cyan) - Hidden on Mobile -->
+      <div class="absolute bottom-20 left-10 md:left-36 w-16 h-16 text-pop-cyan animate-float-delayed z-10 hidden sm:block">
         <svg viewBox="0 0 24 24" fill="currentColor" class="w-full h-full stroke-black stroke-[1.5] drop-shadow-[3px_3px_0px_#000]">
           <circle cx="12" cy="12" r="10"/>
           <circle cx="8" cy="9" r="1.5" fill="#000" stroke="none"/>
@@ -44,8 +44,8 @@ export function Hero() {
         </svg>
       </div>
 
-      <!-- Paper Airplane (Yellow-Green/Cream) -->
-      <div class="absolute bottom-28 right-12 md:right-40 w-16 h-16 text-paper-cream animate-float z-10">
+      <!-- Paper Airplane (Yellow-Green/Cream) - Hidden on Mobile -->
+      <div class="absolute bottom-28 right-12 md:right-40 w-16 h-16 text-paper-cream animate-float z-10 hidden sm:block">
         <svg viewBox="0 0 24 24" fill="currentColor" class="w-full h-full stroke-black stroke-[1.5] drop-shadow-[3px_3px_0px_#000]">
           <polygon points="3 12 22 2 13 22 11 13 3 12"/>
         </svg>
@@ -57,13 +57,13 @@ export function Hero() {
         <!-- Polaroid Profile Container (Left Column) -->
         <div class="relative flex-shrink-0">
           <!-- Speech Bubble overlay -->
-          <div class="absolute -top-12 -right-8 bg-pop-pink text-white border-3 border-black px-4 py-2 rounded-2xl font-heading font-black text-xs md:text-sm shadow-[3px_3px_0px_#000] rotate-[8deg] z-20 bubble-bottom-left uppercase">
+          <div class="absolute -top-10 -right-4 sm:-right-8 bg-pop-pink text-white border-3 border-black px-3 sm:px-4 py-1.5 sm:py-2 rounded-2xl font-heading font-black text-[10px] sm:text-xs md:text-sm shadow-[2px_2px_0px_#000] sm:shadow-[3px_3px_0px_#000] rotate-[8deg] z-20 bubble-bottom-left uppercase">
             LET'S CUT! 🎬
           </div>
 
           <!-- Polaroid Polaroid Image -->
-          <div class="polaroid-card polaroid-left w-72 h-96 sm:w-80 sm:h-[26rem] bg-paper-cream border-4 border-black p-5 shadow-pop-black flex flex-col justify-between cursor-pointer">
-            <div class="w-full h-72 sm:h-[20rem] border-3 border-black overflow-hidden bg-pop-navy">
+          <div class="polaroid-card polaroid-left w-[85vw] max-w-[280px] h-[350px] sm:w-80 sm:h-[26rem] bg-paper-cream border-4 border-black p-4 sm:p-5 shadow-pop-black flex flex-col justify-between cursor-pointer">
+            <div class="w-full h-[260px] sm:h-[20rem] border-3 border-black overflow-hidden bg-pop-navy">
               <img 
                 src="/images/profile/Resume Work Minimal Professional CV - illustrationimage.png" 
                 alt="${profile.name}" 
@@ -77,12 +77,12 @@ export function Hero() {
         </div>
 
         <!-- Name and Role (Right Column) -->
-        <div class="text-center lg:text-left flex flex-col items-center lg:items-start max-w-2xl">
-          <div class="bg-pop-navy text-pop-yellow border-3 border-black px-3 py-1 font-heading font-black text-xs md:text-sm shadow-[3px_3px_0px_#000] uppercase tracking-wider mb-4 rotate-[-2deg]">
+        <div class="text-center lg:text-left flex flex-col items-center lg:items-start max-w-2xl w-full">
+          <div class="bg-pop-navy text-pop-yellow border-3 border-black px-3 py-1 font-heading font-black text-xs md:text-sm shadow-[3px_3px_0px_#000] uppercase tracking-wider mb-4 rotate-[-2deg] w-fit">
             // MOTION & VIDEO EDITOR
           </div>
           
-          <h1 class="text-4xl sm:text-6xl md:text-7xl font-heading font-black uppercase text-pop-yellow text-shadow-pop-navy leading-none mb-3">
+          <h1 class="text-[clamp(2.25rem,8vw,4.5rem)] font-heading font-black uppercase text-pop-yellow text-shadow-pop-navy leading-none mb-3 break-words w-full">
             ${profile.name}
           </h1>
           
@@ -90,7 +90,7 @@ export function Hero() {
             EDITOR - MOTION GRAPHIC ARTIST
           </p>
 
-          <p class="text-text-secondary text-sm md:text-base font-light leading-relaxed mb-8 text-center lg:text-left">
+          <p class="text-text-secondary text-sm md:text-base font-light leading-relaxed mb-8 text-center lg:text-left max-w-md lg:max-w-none">
             ยินดีต้อนรับทุกคนสู่เว็บไซต์ Portfolio ของผมงานแต่ละอย่างใช้ความทุ่มเทและความตั้งใจความทะเยอทะยานของผมจนออกมาเป็นผลงานที่ผมภูมิใจต่างๆในนี้
           </p>
 
@@ -151,7 +151,7 @@ export function Hero() {
       </div>
 
       <!-- Checkerboard Background Strip (Bottom) -->
-      <div class="absolute bottom-10 left-0 w-full h-8 bg-checkerboard-yellow border-t-4 border-black z-0"></div>
+      <div class="absolute bottom-10 left-0 w-full h-6 sm:h-8 bg-checkerboard-yellow border-t-4 border-black z-0"></div>
 
       <!-- Bottom Marquee -->
       <div class="absolute bottom-0 left-0 w-full bg-pop-pink text-black border-t-4 border-black py-2.5 z-10 select-none">
@@ -161,6 +161,7 @@ export function Hero() {
           </div>
         </div>
       </div>
+
       
     </section>
   `;

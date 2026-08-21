@@ -40,6 +40,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initNavbarScrollHighlight();
   initCopyToClipboard();
   initPortfolioModal();
+  initMobileMenu();
 });
 
 // 1. Scroll-MT classes setting on sections
@@ -50,6 +51,7 @@ document.querySelectorAll('section[id]').forEach(section => {
 // 2. Active Navbar Item on Scroll
 function initNavbarScrollHighlight() {
   const navLinks = document.querySelectorAll('.nav-link');
+  const mobileLinks = document.querySelectorAll('.mobile-nav-link');
   const sections = document.querySelectorAll('section[id]');
   
   const observerOptions = {
@@ -69,13 +71,18 @@ function initNavbarScrollHighlight() {
           activeSection = 'profile';
         }
         
-        navLinks.forEach(link => {
-          if (link.getAttribute('data-section') === activeSection) {
-            link.classList.add('active');
-          } else {
-            link.classList.remove('active');
-          }
-        });
+        const updateLinks = (links) => {
+          links.forEach(link => {
+            if (link.getAttribute('data-section') === activeSection) {
+              link.classList.add('active');
+            } else {
+              link.classList.remove('active');
+            }
+          });
+        };
+
+        updateLinks(navLinks);
+        updateLinks(mobileLinks);
       }
     });
   }, observerOptions);
@@ -87,16 +94,67 @@ function initNavbarScrollHighlight() {
   // Safe reset when scrolled back to top
   window.addEventListener('scroll', () => {
     if (window.scrollY < 100) {
-      navLinks.forEach(link => {
-        if (link.getAttribute('data-section') === 'profile') {
-          link.classList.add('active');
-        } else {
-          link.classList.remove('active');
-        }
-      });
+      const resetLinks = (links) => {
+        links.forEach(link => {
+          if (link.getAttribute('data-section') === 'profile') {
+            link.classList.add('active');
+          } else {
+            link.classList.remove('active');
+          }
+        });
+      };
+      resetLinks(navLinks);
+      resetLinks(mobileLinks);
     }
   });
 }
+
+// 2.5. Mobile Hamburger Menu Toggle Controller
+function initMobileMenu() {
+  const menuToggle = document.getElementById('menu-toggle');
+  const mobileMenu = document.getElementById('mobile-menu');
+  const mobileLinks = document.querySelectorAll('.mobile-nav-link');
+  
+  if (!menuToggle || !mobileMenu) return;
+
+  function toggleMenu() {
+    const isOpen = menuToggle.classList.contains('open');
+    if (isOpen) {
+      // Close mobile menu with transform transition slide-up
+      menuToggle.classList.remove('open');
+      mobileMenu.classList.remove('open');
+      setTimeout(() => {
+        // Double check it wasn't re-opened during delay
+        if (!menuToggle.classList.contains('open')) {
+          mobileMenu.classList.add('hidden');
+        }
+      }, 300);
+      document.body.classList.remove('overflow-hidden');
+    } else {
+      // Open mobile menu
+      mobileMenu.classList.remove('hidden');
+      // Delay to ensure hidden display change propagates before transition transform triggers
+      requestAnimationFrame(() => {
+        menuToggle.classList.add('open');
+        mobileMenu.classList.add('open');
+      });
+      document.body.classList.add('overflow-hidden');
+    }
+  }
+
+  menuToggle.addEventListener('click', toggleMenu);
+
+  // Close menu when clicking links
+  mobileLinks.forEach(link => {
+    link.addEventListener('click', () => {
+      menuToggle.classList.remove('open');
+      mobileMenu.classList.remove('open');
+      mobileMenu.classList.add('hidden');
+      document.body.classList.remove('overflow-hidden');
+    });
+  });
+}
+
 
 // 3. Copy-to-clipboard functionality
 function initCopyToClipboard() {

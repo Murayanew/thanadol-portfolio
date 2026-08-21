@@ -46,7 +46,7 @@ export function Experience() {
   }).join('');
 
   return `
-    <section id="experience" class="py-24 border-b-4 border-black bg-bg-primary relative">
+    <section id="experience" class="py-16 md:py-24 border-b-4 border-black bg-bg-primary relative">
       <div class="max-w-4xl mx-auto px-4 md:px-8">
         
         <div class="mb-16 text-center">
