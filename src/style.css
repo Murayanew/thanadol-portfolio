@@ -1,0 +1,206 @@
+@import "tailwindcss";
+
+@theme {
+  --color-bg-primary: #14141C;
+  --color-pop-pink: #FF3E9A;
+  --color-pop-yellow: #FFD400;
+  --color-pop-red: #E8332B;
+  --color-pop-cyan: #3ED9D4;
+  --color-pop-navy: #2A3AA0;
+  --color-paper-cream: #F5EFE0;
+  
+  --font-heading: "Kanit", "Baloo 2", sans-serif;
+  --font-body: "Prompt", "Inter", sans-serif;
+}
+
+@layer base {
+  body {
+    background-color: var(--color-bg-primary);
+    color: var(--color-paper-cream);
+    font-family: var(--font-body);
+    overflow-x: hidden;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-heading);
+  }
+
+  /* Custom scrollbar matching pop theme */
+  ::-webkit-scrollbar {
+    width: 12px;
+  }
+  ::-webkit-scrollbar-track {
+    background: var(--color-bg-primary);
+    border-left: 3px solid #000;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: var(--color-pop-yellow);
+    border: 3px solid #000;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: var(--color-pop-pink);
+  }
+}
+
+/* Comic / Pop Art text shadow */
+.text-shadow-pop-navy {
+  text-shadow: 4px 4px 0px var(--color-pop-navy), 4px 4px 0px #000;
+}
+
+.text-shadow-pop-black {
+  text-shadow: 4px 4px 0px #000;
+}
+
+.text-shadow-pop-red {
+  text-shadow: 3px 3px 0px var(--color-pop-red), 3px 3px 0px #000;
+}
+
+.text-shadow-pop-pink {
+  text-shadow: 3px 3px 0px var(--color-pop-pink), 3px 3px 0px #000;
+}
+
+/* Hard offset box shadows */
+.shadow-pop-black {
+  box-shadow: 6px 6px 0px 0px #000;
+}
+
+.shadow-pop-navy {
+  box-shadow: 6px 6px 0px 0px var(--color-pop-navy), 6px 6px 0px 0px #000;
+}
+
+.shadow-pop-pink {
+  box-shadow: 6px 6px 0px 0px var(--color-pop-pink), 6px 6px 0px 0px #000;
+}
+
+.shadow-pop-yellow {
+  box-shadow: 6px 6px 0px 0px var(--color-pop-yellow), 6px 6px 0px 0px #000;
+}
+
+.shadow-pop-cyan {
+  box-shadow: 6px 6px 0px 0px var(--color-pop-cyan), 6px 6px 0px 0px #000;
+}
+
+/* Floating Animations */
+@keyframes float {
+  0% { transform: translateY(0px) rotate(0deg); }
+  50% { transform: translateY(-12px) rotate(3deg); }
+  100% { transform: translateY(0px) rotate(0deg); }
+}
+
+.animate-float {
+  animation: float 4s ease-in-out infinite;
+}
+
+@keyframes float-delayed {
+  0% { transform: translateY(0px) rotate(0deg); }
+  50% { transform: translateY(12px) rotate(-4deg); }
+  100% { transform: translateY(0px) rotate(0deg); }
+}
+
+.animate-float-delayed {
+  animation: float-delayed 5s ease-in-out infinite;
+}
+
+/* Continuous Marquee Animation */
+@keyframes marquee {
+  0% { transform: translateX(0%); }
+  100% { transform: translateX(-50%); }
+}
+
+.marquee-container {
+  overflow: hidden;
+  display: flex;
+  white-space: nowrap;
+}
+
+.marquee-content {
+  display: inline-flex;
+  animation: marquee 20s linear infinite;
+  min-width: 200%;
+}
+
+/* Support for prefers-reduced-motion */
+@media (prefers-reduced-motion: reduce) {
+  .animate-float, .animate-float-delayed {
+    animation: none !important;
+  }
+  .marquee-content {
+    animation-duration: 60s !important;
+  }
+}
+
+/* Checkerboard Decorative Patterns */
+.bg-checkerboard-red {
+  background-color: var(--color-pop-red);
+  background-image: linear-gradient(45deg, #000 25%, transparent 25%),
+                    linear-gradient(-45deg, #000 25%, transparent 25%),
+                    linear-gradient(45deg, transparent 75%, #000 75%),
+                    linear-gradient(-45deg, transparent 75%, #000 75%);
+  background-size: 16px 16px;
+  background-position: 0 0, 0 8px, 8px -8px, -8px 0px;
+}
+
+.bg-checkerboard-yellow {
+  background-color: var(--color-pop-yellow);
+  background-image: linear-gradient(45deg, #000 25%, transparent 25%),
+                    linear-gradient(-45deg, #000 25%, transparent 25%),
+                    linear-gradient(45deg, transparent 75%, #000 75%),
+                    linear-gradient(-45deg, transparent 75%, #000 75%);
+  background-size: 16px 16px;
+  background-position: 0 0, 0 8px, 8px -8px, -8px 0px;
+}
+
+/* Polaroid Card Tilt effects */
+.polaroid-card {
+  transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275), box-shadow 0.3s ease;
+}
+
+.polaroid-left {
+  transform: rotate(-2.5deg);
+}
+
+.polaroid-right {
+  transform: rotate(2deg);
+}
+
+.polaroid-left-slight {
+  transform: rotate(-1deg);
+}
+
+.polaroid-right-slight {
+  transform: rotate(1.5deg);
+}
+
+/* Hover behaviors */
+.polaroid-card:hover {
+  transform: rotate(0deg) translateY(-8px) scale(1.02);
+  box-shadow: 10px 10px 0px 0px #000;
+  z-index: 10;
+}
+
+/* Speech bubble custom triangle styling */
+.bubble-bottom-left::after {
+  content: '';
+  position: absolute;
+  bottom: -15px;
+  left: 20px;
+  border-width: 15px 15px 0 0;
+  border-style: solid;
+  border-color: var(--color-pop-pink) transparent transparent transparent;
+  display: block;
+  width: 0;
+}
+
+/* Active Nav pill highlighting */
+.nav-link.active {
+  background-color: var(--color-pop-yellow);
+  color: #000;
+  border-color: #000;
+  box-shadow: 3px 3px 0px #000;
+  transform: translateY(-2px);
+}
+
+/* Compatibility override for standard line-clamp */
+.line-clamp-2 {
+  line-clamp: 2;
+}
