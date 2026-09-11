@@ -23,30 +23,79 @@ export const videoWorks = [
   {
     "title": "สังขละบุรีจ๋า พวกพี่มาแล้วจ๊ะ │ ตอนที่ 1",
     "link": "https://www.youtube.com/watch?v=C6taSSxS1LQ",
-    "tags": ["Motion"],
+    "tags": ["Editor", "Motion"],
     "description": "ตัดต่อคลิปทริปท่องเที่ยวแบบ Story Telling ให้ช่อง กุ๊ย โปรดัคชั่น พร้อมทำ Motion Graphic ประกอบฉาก",
     "cover": "/images/video/gui1.webp"
   },
   {
     "title": "สังขละบุรีจ๋า พวกพี่มาแล้วจ๊ะ │ ตอนจบ",
     "link": "https://www.youtube.com/watch?v=Rsm69O21Qxg",
-    "tags": ["Motion"],
+    "tags": ["Editor", "Motion"],
     "description": "ตัดต่อตอนจบของซีรีส์ทริปสังขละบุรี เรียบเรียงฟุตเทจให้ต่อเนื่องกับตอนก่อนหน้า พร้อมทำ Motion Graphic ปิดเรื่อง",
     "cover": "/images/video/gui2.webp"
   },
   {
     "title": "ชาวกุ๊ยพาตะลุย Exhibition │ ตอนที่ 1 กุ๊ยจัดงาน",
     "link": "https://www.youtube.com/watch?v=bnnuOnf1TGA&t=44s",
-    "tags": ["Motion"],
+    "tags": ["Editor", "Motion"],
     "description": "ตัดต่อคลิปพาชมงาน Exhibition ให้ช่อง กุ๊ย โปรดัคชั่น พร้อมทำ Motion Graphic ประกอบการนำเสนอ",
     "cover": "/images/video/gui3.jpg"
   },
   {
     "title": "ชาวกุ๊ยพาตะลุย Exhibition │ ตอนจบ กุ๊ยเก็บงาน",
     "link": "https://www.youtube.com/watch?v=wU6U_mB5dx8&t=26s",
-    "tags": ["Motion"],
+    "tags": ["Editor", "Motion Graphic"],
     "description": "ตัดต่อตอนจบซีรีส์งาน Exhibition พร้อมทำ Motion Graphic ปิดจบเรื่องราว",
     "cover": "/images/video/gui4.webp"
+  },
+  {
+    "title": "เดี๋ยวหล่อไป",
+    "link": "https://www.youtube.com/shorts/o8k2WEU2zd0",
+    "tags": ["Editor"],
+    "description": "ตัดต่อคลิป YouTube Shorts แนวตลก/ไลฟ์สไตล์ เรียบเรียงจังหวะให้เข้ากับมุกและอารมณ์ขัน",
+    "cover": "/images/video/guishort1.webp"
+  },
+  {
+    "title": "จจจ.",
+    "link": "https://www.youtube.com/shorts/kleJdw17-h4",
+    "tags": ["Editor"],
+    "description": "ตัดต่อคลิป YouTube Shorts เน้นจังหวะการเล่าเรื่องสั้นกระชับ",
+    "cover": "/images/video/guishort2.webp"
+  },
+  {
+    "title": "คับจีอยู่ได้ คับใจอยู่ยาก",
+    "link": "https://www.youtube.com/shorts/ZrkvJH4TELA",
+    "tags": ["Editor"],
+    "description": "ตัดต่อคลิป YouTube Shorts แนวเรื่องตลก/ดราม่า เรียบเรียงฟุตเทจให้อารมณ์ได้ตามจังหวะ",
+    "cover": "/images/video/guishort3.webp"
+  },
+  {
+    "title": "เต็มเม็ด เต็มหน่วย",
+    "link": "https://www.youtube.com/shorts/pzP5S-JaZsw",
+    "tags": ["Editor"],
+    "description": "ตัดต่อคลิป YouTube Shorts เนื้อหาไลฟ์สไตล์/เรื่องตลก",
+    "cover": "/images/video/guishort4.webp"
+  },
+  {
+    "title": "โดนลุงเล่นแล้ว",
+    "link": "https://www.youtube.com/shorts/2H5szXTEMuk",
+    "tags": ["Editor"],
+    "description": "ตัดต่อคลิป YouTube Shorts แนวเรื่องเล่า/ดราม่าให้เข้าใจง่ายและน่าติดตาม",
+    "cover": "/images/video/guishort5.webp"
+  },
+  {
+    "title": "สปี๊คอิงลิชพลีส?",
+    "link": "https://www.youtube.com/shorts/p8FxpNGWqgk",
+    "tags": ["Editor"],
+    "description": "ตัดต่อคลิป YouTube Shorts แนวสนุกสนาน เรียบเรียงจังหวะการพูดและมุกให้ลื่นไหล",
+    "cover": "/images/video/guishort6.webp"
+  },
+  {
+    "title": "คุ้นๆนะคนนี้",
+    "link": "https://www.youtube.com/shorts/ScPXillFq8s",
+    "tags": ["Editor"],
+    "description": "ตัดต่อคลิป YouTube Shorts แนวเรื่องเล่า/เกร็ดความรู้",
+    "cover": "/images/video/guishort7.webp"
   },
   {
     "title": "ตัดต่อแบบ Speed Ramping",
