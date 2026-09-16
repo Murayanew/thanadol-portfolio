@@ -12,10 +12,11 @@ export function Modal() {
           </svg>
         </button>
 
-        <!-- Image Container -->
+        <!-- Media Container (Image or Video) -->
         <div class="flex justify-center mb-6 w-full mt-8 sm:mt-0">
-          <div class="relative bg-pop-navy border-3 border-black overflow-hidden shadow-[2px_2px_0px_#000]">
+          <div class="relative bg-pop-navy border-3 border-black overflow-hidden shadow-[2px_2px_0px_#000] flex items-center justify-center">
             <img id="modal-img" src="" alt="" class="max-w-full max-h-[50vh] sm:max-h-[60vh] md:max-h-[65vh] block object-contain" />
+            <video id="modal-video" controls playsinline class="hidden max-w-full max-h-[50vh] sm:max-h-[60vh] md:max-h-[65vh] block object-contain bg-black"></video>
           </div>
         </div>
 

@@ -195,6 +195,7 @@ function initCopyToClipboard() {
 function initPortfolioModal() {
   const modal = document.getElementById('project-modal');
   const modalWrapper = document.getElementById('modal-wrapper');
+  const modalVideo = document.getElementById('modal-video');
   const modalImg = document.getElementById('modal-img');
   const modalTitle = document.getElementById('modal-title');
   const modalDescription = document.getElementById('modal-description');
@@ -228,10 +229,27 @@ function initPortfolioModal() {
       if (!project) return;
       
       // Inject details
-      modalImg.src = project.cover;
-      modalImg.alt = project.title;
       modalTitle.textContent = project.title;
       modalDescription.textContent = project.description || '';
+
+      // Video vs Image display
+      if (project.video) {
+        modalImg.classList.add('hidden');
+        modalVideo.classList.remove('hidden');
+        modalVideo.src = project.video;
+        modalVideo.poster = project.cover || '';
+        modalVideo.play().catch(() => {});
+      } else {
+        if (modalVideo) {
+          modalVideo.pause();
+          modalVideo.removeAttribute('src');
+          modalVideo.load();
+          modalVideo.classList.add('hidden');
+        }
+        modalImg.classList.remove('hidden');
+        modalImg.src = project.cover;
+        modalImg.alt = project.title;
+      }
       
       // Inject tags
       modalRoles.innerHTML = project.tags.map((tag, tIdx) => {
@@ -269,8 +287,14 @@ function initPortfolioModal() {
         currentPhotoIdx = null;
         
         // Set link button visibility for Video works
-        if (project.link && project.link.trim() !== '') {
+        const linkSpan = modalLink.querySelector('span');
+        if (project.video) {
+          modalLink.href = project.video;
+          if (linkSpan) linkSpan.textContent = 'เปิดคลิปเต็มจอ';
+          modalLink.classList.remove('hidden');
+        } else if (project.link && project.link.trim() !== '') {
           modalLink.href = project.link;
+          if (linkSpan) linkSpan.textContent = 'ดูผลงานจริง';
           modalLink.classList.remove('hidden');
         } else {
           modalLink.href = '';
@@ -314,6 +338,12 @@ function initPortfolioModal() {
 
   // Close modal
   const closeModal = () => {
+    if (modalVideo) {
+      modalVideo.pause();
+      modalVideo.currentTime = 0;
+      modalVideo.removeAttribute('src');
+      modalVideo.load();
+    }
     modal.classList.remove('opacity-100');
     modal.classList.add('opacity-0', 'pointer-events-none');
     modalWrapper.classList.remove('scale-100', 'opacity-100');

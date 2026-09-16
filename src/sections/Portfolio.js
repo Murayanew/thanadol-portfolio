@@ -52,19 +52,34 @@ export function CatalogSection(title, icon, items, gridId) {
         </div>
       `;
     } else {
+      const hasDirectVideo = Boolean(item.video);
       coverHtml = `
-        <div class="relative overflow-hidden aspect-video bg-pop-navy border-3 border-black mb-4">
+        <div class="relative overflow-hidden aspect-video bg-pop-navy border-3 border-black mb-4 group/media">
           <!-- Polaroid Item Number Tag -->
           <div class="absolute top-2 left-2 z-10 border-2 border-black px-2 py-0.5 bg-pop-yellow text-black font-heading font-black text-xs shadow-[2px_2px_0px_#000] rotate-[-3deg]">
             #${idx + 1}
           </div>
           
+          ${hasDirectVideo ? `
+            <!-- Video Play Badge -->
+            <div class="absolute top-2 right-2 z-10 border-2 border-black px-2 py-0.5 bg-pop-red text-white font-heading font-black text-[10px] shadow-[1.5px_1.5px_0px_#000] rounded-full flex items-center gap-1">
+              <span>▶ MP4 CLIP</span>
+            </div>
+            
+            <!-- Center Play Icon Glow -->
+            <div class="absolute inset-0 flex items-center justify-center pointer-events-none z-10">
+              <div class="w-11 h-11 rounded-full border-2 border-black bg-pop-yellow/90 flex items-center justify-center text-black shadow-[2px_2px_0px_#000] transition-transform duration-200 group-hover/media:scale-110">
+                <svg class="w-5 h-5 fill-current ml-0.5" viewBox="0 0 24 24"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg>
+              </div>
+            </div>
+          ` : ''}
+
           <img src="${item.cover}" alt="${item.title}" class="w-full h-full object-cover" loading="lazy" />
           
           <!-- Zoom Hover Overlay -->
-          <div class="absolute inset-0 bg-pop-pink/30 opacity-0 hover:opacity-100 transition-opacity duration-200 flex items-center justify-center z-10">
+          <div class="absolute inset-0 bg-pop-pink/30 opacity-0 hover:opacity-100 transition-opacity duration-200 flex items-center justify-center z-20">
             <span class="bg-white text-black border-2 border-black px-3 py-1.5 font-heading font-black text-xs shadow-[2.5px_2.5px_0px_#000] rotate-[3deg] uppercase">
-              ${item.link && item.link.trim() !== '' ? 'ดูผลงานจริง' : 'ดูรายละเอียด'}
+              ${hasDirectVideo ? '▶ ดูคลิปวิดีโอ' : (item.link && item.link.trim() !== '' ? 'ดูผลงานจริง' : 'ดูรายละเอียด')}
             </span>
           </div>
         </div>

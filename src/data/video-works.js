@@ -1,5 +1,93 @@
 export const videoWorks = [
   {
+    "title": "Gold Amulet — แหวนโบราณฝังพลอยแท้",
+    "video": "/images/new work/Gold Amulet/Gold Amlet 6.mp4",
+    "link": "/images/new work/Gold Amulet/Gold Amlet 6.mp4",
+    "tags": ["Editor", "Shorts", "Color Grading"],
+    "description": "ตัดต่อคลิปสั้นนำเสนอแหวนทองโบราณฝังพลอย เล่าเรื่องราวมรดกและตรวจเช็คเนื้อทองให้ร้าน Gold Amulet",
+    "cover": "/images/new work/thumbnails/476f6c64_Gold_Amlet_6.webp"
+  },
+  {
+    "title": "Gold Amulet — ร้านหลอมทองและบริการรับซื้อทอง",
+    "video": "/images/new work/Gold Amulet/Gold Amulet 7.mp4",
+    "link": "/images/new work/Gold Amulet/Gold Amulet 7.mp4",
+    "tags": ["Editor", "Shorts", "Sound Design"],
+    "description": "ตัดต่อคลิปสั้นนำเสนอหน้าร้าน Gold Amulet ร้านหลอมทองและรับเช็คเปอร์เซ็นต์ทอง",
+    "cover": "/images/new work/thumbnails/476f6c64_Gold_Amulet_7.webp"
+  },
+  {
+    "title": "Gold Amulet — ตรวจสอบเข็มขัดเงินโบราณ",
+    "video": "/images/new work/Gold Amulet/Gold Amulet 8(1).mp4",
+    "link": "/images/new work/Gold Amulet/Gold Amulet 8(1).mp4",
+    "tags": ["Editor", "Shorts", "Creative"],
+    "description": "ตัดต่อคลิปรีวิวและตรวจสอบเข็มขัดเงินโบราณ งานแกะลายประณีต พร้อมวิเคราะห์มูลค่าและเนื้อเงิน",
+    "cover": "/images/new work/thumbnails/476f6c64_Gold_Amulet_8_1_.webp"
+  },
+  {
+    "title": "Gold Amulet — ตรวจเช็คต่างหูทองคำแท้",
+    "video": "/images/new work/Gold Amulet/Gold Amulet 9.mp4",
+    "link": "/images/new work/Gold Amulet/Gold Amulet 9.mp4",
+    "tags": ["Editor", "Shorts", "Subtitles"],
+    "description": "ตัดต่อคลิปสั้นตรวจเช็คต่างหูทองคำขนาดเล็ก การทดสอบเปอร์เซ็นต์ทองและการประเมินราคา",
+    "cover": "/images/new work/thumbnails/476f6c64_Gold_Amulet_9.webp"
+  },
+  {
+    "title": "Gold Amulet — เรื่องเล่าทองในกระป๋องใบเล็กๆ",
+    "video": "/images/new work/Gold Amulet/Gold Amulet 10.mp4",
+    "link": "/images/new work/Gold Amulet/Gold Amulet 10.mp4",
+    "tags": ["Editor", "Storytelling", "Shorts"],
+    "description": "ตัดต่อคลิปสั้นสไตล์ Storytelling ลูกค้านำทองใส่กระป๋องใบเล็กๆ มาหลอมและตรวจเช็คที่ร้าน Gold Amulet",
+    "cover": "/images/new work/thumbnails/476f6c64_Gold_Amulet_10.webp"
+  },
+  {
+    "title": "TK GOLD — เช็คความต่างทอง 80% กับ 90%",
+    "video": "/images/new work/TK GOLD/Clip8.mp4",
+    "link": "/images/new work/TK GOLD/Clip8.mp4",
+    "tags": ["Editor", "Motion Graphic", "Shorts"],
+    "description": "ตัดต่อคลิปให้ความรู้เรื่องความต่างของเปอร์เซ็นต์ทอง 80% และ 90% พร้อมใส่ Motion กราฟิกประกอบให้เข้าใจง่าย",
+    "cover": "/images/new work/thumbnails/436c6970_Clip8.webp"
+  },
+  {
+    "title": "TK GOLD — แนะนำเกร็ดความรู้และการเลือกซื้อทอง",
+    "video": "/images/new work/TK GOLD/Clip9.mp4",
+    "link": "/images/new work/TK GOLD/Clip9.mp4",
+    "tags": ["Editor", "Shorts", "Subtitles"],
+    "description": "ตัดต่อคลิปสั้นให้ความรู้การลงทุนและประเมินราคาทองคำสำหรับลูกค้าหน้าร้าน TK GOLD",
+    "cover": "/images/new work/thumbnails/436c6970_Clip9.webp"
+  },
+  {
+    "title": "ร้านทองอูโน่ — เบื้องหลังงานช่างทองและการทำงานจริง",
+    "video": "/images/new work/ร้านทองอูโน่/อูโน่ 1.mp4",
+    "link": "/images/new work/ร้านทองอูโน่/อูโน่ 1.mp4",
+    "tags": ["Editor", "Shorts", "Lifestyle"],
+    "description": "ตัดต่อคลิปพูดคุยและสัมภาษณ์ช่างทองหน้าร้านอูโน่ เล่าบรรยากาศการทำงานแบบเป็นกันเองและจริงใจ",
+    "cover": "/images/new work/thumbnails/e0b8ade0_อูโน่_1.webp"
+  },
+  {
+    "title": "ร้านทองอูโน่ — รีวิวกรอบพระทองคำแกะลายยกซุ้ม",
+    "video": "/images/new work/ร้านทองอูโน่/อูโน่ 2.mp4",
+    "link": "/images/new work/ร้านทองอูโน่/อูโน่ 2.mp4",
+    "tags": ["Editor", "Shorts", "Macro Shot"],
+    "description": "ตัดต่อคลิปรีวิวตลับและกรอบพระทองคำแท้ งานขึ้นมือแกะลายประณีตด้านหลังปิดข้าง สวยงามคมชัด",
+    "cover": "/images/new work/thumbnails/e0b8ade0_อูโน่_2.webp"
+  },
+  {
+    "title": "ร้านทองอูโน่ — แนะนำระบบเช็คราคาทอง Real-Time",
+    "video": "/images/new work/ร้านทองอูโน่/อูโน่ 3.mp4",
+    "link": "/images/new work/ร้านทองอูโน่/อูโน่ 3.mp4",
+    "tags": ["Editor", "Motion", "Shorts"],
+    "description": "ตัดต่อคลิปแนะนำเว็บไซต์และระบบเช็คราคาทองคำแบบ Real-Time บริการครบวงจรเรื่องทองคำ",
+    "cover": "/images/new work/thumbnails/e0b8ade0_อูโน่_3.webp"
+  },
+  {
+    "title": "ร้านทองอูโน่ — บริการตรวจเช็คและรับซื้อทองครบวงจร",
+    "video": "/images/new work/ร้านทองอูโน่/อูโน่ 4.mp4",
+    "link": "/images/new work/ร้านทองอูโน่/อูโน่ 4.mp4",
+    "tags": ["Editor", "Shorts", "Subtitles"],
+    "description": "ตัดต่อคลิปสั้นพรีเซนต์ขั้นตอนการตรวจเช็คเนื้อทองด้วยเครื่องมือมาตรฐานและการบริการที่ร้านทองอูโน่",
+    "cover": "/images/new work/thumbnails/e0b8ade0_อูโน่_4.webp"
+  },
+  {
     "title": "นี่มันต้นอะไรทำไมถึงระเบิดได้!!!",
     "link": "https://www.youtube.com/shorts/Ncx15wY0a_k",
     "tags": ["Editor", "Motion", "Research", "Creative"],

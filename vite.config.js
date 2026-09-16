@@ -6,4 +6,9 @@ export default defineConfig({
     tailwindcss(),
   ],
   base: './',
+  server: {
+    watch: {
+      ignored: ['**/*.mp4']
+    }
+  }
 });
