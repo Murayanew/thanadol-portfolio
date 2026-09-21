@@ -14,9 +14,18 @@ export function Modal() {
 
         <!-- Media Container (Image or Video) -->
         <div class="flex justify-center mb-6 w-full mt-8 sm:mt-0">
-          <div class="relative bg-pop-navy border-3 border-black overflow-hidden shadow-[2px_2px_0px_#000] flex items-center justify-center">
+          <div id="modal-media-container" class="relative bg-pop-navy border-3 border-black overflow-hidden shadow-[2px_2px_0px_#000] flex items-center justify-center">
             <img id="modal-img" src="" alt="" class="max-w-full max-h-[50vh] sm:max-h-[60vh] md:max-h-[65vh] block object-contain" />
             <video id="modal-video" controls playsinline class="hidden max-w-full max-h-[50vh] sm:max-h-[60vh] md:max-h-[65vh] block object-contain bg-black"></video>
+            
+            <!-- Diagonal Watermark Overlay for Video Clips -->
+            <div id="modal-watermark" class="hidden absolute inset-0 pointer-events-none z-20 flex items-center justify-center overflow-hidden select-none">
+              <div class="transform -rotate-30 py-2 sm:py-3 px-8 sm:px-14 flex items-center justify-center border-y-3 sm:border-y-4 border-white/40 bg-black/25 backdrop-blur-[0.5px]">
+                <span class="font-heading font-black text-4xl sm:text-6xl md:text-7xl tracking-[0.25em] text-white/70 text-shadow-watermark uppercase whitespace-nowrap">
+                  Whypro
+                </span>
+              </div>
+            </div>
           </div>
         </div>
 

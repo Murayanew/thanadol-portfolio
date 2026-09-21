@@ -53,6 +53,10 @@ export function CatalogSection(title, icon, items, gridId) {
       `;
     } else {
       const hasDirectVideo = Boolean(item.video);
+      const isNewWork = Boolean(
+        (item.video && item.video.includes('new work')) ||
+        (item.cover && item.cover.includes('new work'))
+      );
       coverHtml = `
         <div class="relative overflow-hidden aspect-video bg-pop-navy border-3 border-black mb-4 group/media">
           <!-- Polaroid Item Number Tag -->
@@ -75,6 +79,17 @@ export function CatalogSection(title, icon, items, gridId) {
           ` : ''}
 
           <img src="${item.cover}" alt="${item.title}" class="w-full h-full object-cover" loading="lazy" />
+
+          ${isNewWork ? `
+            <!-- Diagonal Watermark Overlay for new work clips -->
+            <div class="absolute inset-0 pointer-events-none z-[15] flex items-center justify-center overflow-hidden select-none">
+              <div class="transform -rotate-25 py-1 px-8 flex items-center justify-center border-y-2 border-white/40 bg-black/25 backdrop-blur-[0.5px]">
+                <span class="font-heading font-black text-2xl sm:text-3xl tracking-[0.25em] text-white/75 text-shadow-watermark uppercase whitespace-nowrap">
+                  Whypro
+                </span>
+              </div>
+            </div>
+          ` : ''}
           
           <!-- Zoom Hover Overlay -->
           <div class="absolute inset-0 bg-pop-pink/30 opacity-0 hover:opacity-100 transition-opacity duration-200 flex items-center justify-center z-20">

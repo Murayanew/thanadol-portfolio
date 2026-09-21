@@ -204,6 +204,8 @@ function initPortfolioModal() {
   const modalLikeBtn = document.getElementById('modal-like-btn');
   const heartIcon = document.getElementById('heart-icon');
   const likeText = document.getElementById('like-text');
+  const modalWatermark = document.getElementById('modal-watermark');
+  const modalMediaContainer = document.getElementById('modal-media-container');
   
   // Track liked photos in memory
   const likedPhotos = new Set();
@@ -232,6 +234,11 @@ function initPortfolioModal() {
       modalTitle.textContent = project.title;
       modalDescription.textContent = project.description || '';
 
+      const isNewWork = Boolean(
+        (project.video && project.video.includes('new work')) ||
+        (project.cover && project.cover.includes('new work'))
+      );
+
       // Video vs Image display
       if (project.video) {
         modalImg.classList.add('hidden');
@@ -249,6 +256,15 @@ function initPortfolioModal() {
         modalImg.classList.remove('hidden');
         modalImg.src = project.cover;
         modalImg.alt = project.title;
+      }
+
+      // Watermark display
+      if (modalWatermark) {
+        if (isNewWork) {
+          modalWatermark.classList.remove('hidden');
+        } else {
+          modalWatermark.classList.add('hidden');
+        }
       }
       
       // Inject tags
@@ -338,11 +354,17 @@ function initPortfolioModal() {
 
   // Close modal
   const closeModal = () => {
+    if (document.fullscreenElement) {
+      document.exitFullscreen().catch(() => {});
+    }
     if (modalVideo) {
       modalVideo.pause();
       modalVideo.currentTime = 0;
       modalVideo.removeAttribute('src');
       modalVideo.load();
+    }
+    if (modalWatermark) {
+      modalWatermark.classList.add('hidden');
     }
     modal.classList.remove('opacity-100');
     modal.classList.add('opacity-0', 'pointer-events-none');
@@ -350,6 +372,29 @@ function initPortfolioModal() {
     modalWrapper.classList.add('scale-95', 'opacity-0');
     document.body.classList.remove('overflow-hidden');
   };
+
+  // Fullscreen video container support to preserve watermark on fullscreen view
+  if (modalLink) {
+    modalLink.addEventListener('click', (e) => {
+      const currentSrc = modalVideo && modalVideo.getAttribute('src');
+      if (currentSrc && modalMediaContainer && (document.fullscreenEnabled || document.webkitFullscreenEnabled)) {
+        e.preventDefault();
+        if (!document.fullscreenElement && !document.webkitFullscreenElement) {
+          const reqFullscreen = modalMediaContainer.requestFullscreen || modalMediaContainer.webkitRequestFullscreen;
+          if (reqFullscreen) {
+            reqFullscreen.call(modalMediaContainer).catch(() => {
+              window.open(modalLink.href, '_blank');
+            });
+          } else {
+            window.open(modalLink.href, '_blank');
+          }
+        } else {
+          const exitFs = document.exitFullscreen || document.webkitExitFullscreen;
+          if (exitFs) exitFs.call(document);
+        }
+      }
+    });
+  }
 
   closeTriggers.forEach(trigger => {
     if (!trigger) return;
