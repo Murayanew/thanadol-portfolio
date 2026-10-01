@@ -235,8 +235,8 @@ function initPortfolioModal() {
       modalDescription.textContent = project.description || '';
 
       const isNewWork = Boolean(
-        (project.video && project.video.includes('new work')) ||
-        (project.cover && project.cover.includes('new work'))
+        (project.video && (project.video.includes('new work') || project.video.includes('newest'))) ||
+        (project.cover && (project.cover.includes('new work') || project.cover.includes('newest')))
       );
 
       // Video vs Image display

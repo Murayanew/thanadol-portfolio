@@ -1,5 +1,149 @@
 export const videoWorks = [
   {
+    "title": "TK GOLD — เจาะลึกตรวจสอบเส้นทองโบราณปริศนา",
+    "video": "/images/newest/TK Gold 10(1).mp4",
+    "link": "/images/newest/TK Gold 10(1).mp4",
+    "tags": ["Editor"],
+    "description": "ตัดต่อคลิปสั้นไขข้อสงสัย 'นี่คืออะไร?' ตรวจเช็คเนื้อทองโบราณและวัตถุดิบงานช่างทองสำหรับร้าน TK GOLD",
+    "cover": "/images/newest/thumbnails/TK_Gold_10_1_.webp"
+  },
+  {
+    "title": "TK GOLD — ตรวจเช็คเชิงเทียนและเครื่องเงินโบราณ",
+    "video": "/images/newest/Tk Gold 11.mp4",
+    "link": "/images/newest/Tk Gold 11.mp4",
+    "tags": ["Editor"],
+    "description": "ตัดต่อคลิปรีวิวและตรวจสอบเชิงเทียนเงินโบราณ วิเคราะห์เปอร์เซ็นต์เงินและประเมินมูลค่างานสะสม",
+    "cover": "/images/newest/thumbnails/Tk_Gold_11.webp"
+  },
+  {
+    "title": "TK GOLD — เปิดกล่องพัสดุตรวจเช็คทองส่งตรงจากลูกค้า",
+    "video": "/images/newest/TK Gold 12.mp4",
+    "link": "/images/newest/TK Gold 12.mp4",
+    "tags": ["Editor"],
+    "description": "ตัดต่อคลิปสไตล์ Unboxing แกะกล่องพัสดุทองคำที่ลูกค้าส่งมาตรวจเช็คเปอร์เซ็นต์ทองและประเมินราคาจริง",
+    "cover": "/images/newest/thumbnails/TK_Gold_12.webp"
+  },
+  {
+    "title": "ร้านทองอูโน่ — รับซื้อและชั่งน้ำหนักสร้อยทองคำแท้",
+    "video": "/images/newest/อูโน่ 5.mp4",
+    "link": "/images/newest/อูโน่ 5.mp4",
+    "tags": ["Editor"],
+    "description": "ตัดต่อคลิปบรรยากาศการรับซื้อสร้อยทองคำ ตรวจเช็คเปอร์เซ็นต์เนื้อทองและชั่งน้ำหนักมาตรฐานหน้าร้าน",
+    "cover": "/images/newest/thumbnails/อูโน่_5.webp"
+  },
+  {
+    "title": "ร้านทองอูโน่ — บริการร้านหลอมทองปากน้ำ ครบวงจร",
+    "video": "/images/newest/อูโน่ 6.mp4",
+    "link": "/images/newest/อูโน่ 6.mp4",
+    "tags": ["Editor"],
+    "description": "ตัดต่อคลิปสั้นแนะนำบริการหลอมทองปากน้ำ ตรวจสอบเปอร์เซ็นต์ทองคำด้วยเครื่องมือทันสมัยและแม่นยำ",
+    "cover": "/images/newest/thumbnails/อูโน่_6.webp"
+  },
+  {
+    "title": "ร้านทองอูโน่ — ทักทายลูกค้าและพาชมขั้นตอนการหลอมทอง",
+    "video": "/images/newest/อูโน่ 7(1).mp4",
+    "link": "/images/newest/อูโน่ 7(1).mp4",
+    "tags": ["Editor"],
+    "description": "ตัดต่อคลิปสั้นนำเสนอความเป็นกันเองและการบริการลูกค้าหน้าร้านทองอูโน่ ร้านหลอมทองปากน้ำ",
+    "cover": "/images/newest/thumbnails/อูโน่_7_1_.webp"
+  },
+  {
+    "title": "ร้านทองอูโน่ — รับซื้อเครื่องประดับและงานเงินโบราณ",
+    "video": "/images/newest/อูโน่ 8.mp4",
+    "link": "/images/newest/อูโน่ 8.mp4",
+    "tags": ["Editor"],
+    "description": "ตัดต่อคลิปตรวจเช็คเครื่องประดับเงินแท้ สร้อย กำไล และของสะสมโบราณพร้อมวิเคราะห์ราคา",
+    "cover": "/images/newest/thumbnails/อูโน่_8.webp"
+  },
+  {
+    "title": "ร้านทองอูโน่ — รีวิวงานเลี่ยมกรอบพระกันน้ำอย่างประณีต",
+    "video": "/images/newest/อูโน่ 12.mp4",
+    "link": "/images/newest/อูโน่ 12.mp4",
+    "tags": ["Editor"],
+    "description": "ตัดต่อคลิปสั้นเจาะลึกมุมมอง Macro Shot รีวิวงานขึ้นกรอบพระเลี่ยมกันน้ำแบบใส คมชัดทุกรายละเอียด",
+    "cover": "/images/newest/thumbnails/อูโน่_12.webp"
+  },
+  {
+    "title": "โอม แอนทีค — รับซื้อเหรียญหลวงพ่อโสธรเลี่ยมกรอบทองคำ",
+    "video": "/images/newest/โอม 3.mp4",
+    "link": "/images/newest/โอม 3.mp4",
+    "tags": ["Editor"],
+    "description": "ตัดต่อคลิปสั้นส่องพระเครื่องยอดนิยม รับซื้อเหรียญหลวงพ่อโสธรเลี่ยมกรอบทองคำแท้ งานสะสมหายาก",
+    "cover": "/images/newest/thumbnails/โอม_3.webp"
+  },
+  {
+    "title": "โอม แอนทีค — ส่อง 3 พระเครื่องและเครื่องรางยอดนิยม",
+    "video": "/images/newest/โอม 4.mp4",
+    "link": "/images/newest/โอม 4.mp4",
+    "tags": ["Editor"],
+    "description": "ตัดต่อคลิปแนะนำการดูเหรียญพระพรหม เหรียญแพะ และพระโพธิสัตว์พังพระกาฬ ชี้จุดสังเกตแบบเข้าใจง่าย",
+    "cover": "/images/newest/thumbnails/โอม_4.webp"
+  },
+  {
+    "title": "โอม แอนทีค — รับซื้อเหรียญหลวงพ่อลงยาลายธงชาติไทย",
+    "video": "/images/newest/โอม 5.mp4",
+    "link": "/images/newest/โอม 5.mp4",
+    "tags": ["Editor"],
+    "description": "ตัดต่อคลิปรีวิวเหรียญพระพุทธคุณสูง ลงยาลายธงชาติไทย งานศิลป์โบราณทรงคุณค่า",
+    "cover": "/images/newest/thumbnails/โอม_5.webp"
+  },
+  {
+    "title": "โอม แอนทีค — พระปิดตา หลวงปู่โต๊ะ วัดประดู่ฉิมพลี",
+    "video": "/images/newest/โอม 6.mp4",
+    "link": "/images/newest/โอม 6.mp4",
+    "tags": ["Editor"],
+    "description": "ตัดต่อคลิปส่องพระปิดตา หลวงปู่โต๊ะ วัดประดู่ฉิมพลี เลี่ยมกรอบทองคำยกซุ้มอย่างงดงาม",
+    "cover": "/images/newest/thumbnails/โอม_6.webp"
+  },
+  {
+    "title": "โอม แอนทีค — ส่องแหวนเงินโบราณและเหรียญลงยาสุดล้ำค่า",
+    "video": "/images/newest/โอม 7.mp4",
+    "link": "/images/newest/โอม 7.mp4",
+    "tags": ["Editor"],
+    "description": "ตัดต่อคลิปเจาะลึกแหวนพระเครื่องและเหรียญลงยาหายาก ชี้ตำหนิและความแท้ระดับพรีเมียม",
+    "cover": "/images/newest/thumbnails/โอม_7.webp"
+  },
+  {
+    "title": "โอม แอนทีค — ตะกรุดทองคำจิ๋วไซส์มินิ ราคาไม่เล็กตามตัว",
+    "video": "/images/newest/โอม 8.mp4",
+    "link": "/images/newest/โอม 8.mp4",
+    "tags": ["Editor"],
+    "description": "ตัดต่อคลิปสั้นพาชมตะกรุดทองคำขนาดพกพา งานเอกลักษณ์หายากที่มูลค่าเกินตัว",
+    "cover": "/images/newest/thumbnails/โอม_8.webp"
+  },
+  {
+    "title": "โอม แอนทีค — ส่องเหรียญหลวงพ่อทวด วัดช้างให้",
+    "video": "/images/newest/โอม 9.mp4",
+    "link": "/images/newest/โอม 9.mp4",
+    "tags": ["Editor"],
+    "description": "ตัดต่อคลิปพาส่องเหรียญหลวงพ่อทวด วัดช้างให้ เนื้อรมดำ พุทธคุณแคล้วคลาดปลอดภัยยอดนิยม",
+    "cover": "/images/newest/thumbnails/โอม_9.webp"
+  },
+  {
+    "title": "โอม แอนทีค — วิเคราะห์เนื้อพระโบราณลึกลับ เป็นพระหรือเป็นอะไร?",
+    "video": "/images/newest/โอม 10.mp4",
+    "link": "/images/newest/โอม 10.mp4",
+    "tags": ["Editor"],
+    "description": "ตัดต่อคลิปสั้นชวนคิดและพิสูจน์เนื้อหามวลสารโบราณ ตรวจสอบที่มาของวัตถุมงคลทรงคุณค่า",
+    "cover": "/images/newest/thumbnails/โอม_10.webp"
+  },
+  {
+    "title": "โอม แอนทีค — เหรียญพระทองคำแท้ ราคาเกินราคาทอง",
+    "video": "/images/newest/โอม 11.mp4",
+    "link": "/images/newest/โอม 11.mp4",
+    "tags": ["Editor"],
+    "description": "ตัดต่อคลิปเทียบเหรียญพระทองคำแท้เลี่ยมกันน้ำ อธิบายมูลค่าพุทธศิลป์ที่สูงเกินกว่าน้ำหนักทอง",
+    "cover": "/images/newest/thumbnails/โอม_11.webp"
+  },
+  {
+    "title": "โอม แอนทีค — เปิดถาดรับซื้อของสะสมโบราณ พันธุ์ทิพย์งามวงศ์วาน",
+    "video": "/images/newest/โอม 13.mp4",
+    "link": "/images/newest/โอม 13.mp4",
+    "tags": ["Editor"],
+    "description": "ตัดต่อคลิปพาทัวร์หน้าร้าน โอม แอนทีค พันทิพย์งามวงศ์วาน รับซื้อเครื่องเงิน ทองคำ พระเครื่อง และของเก่าทุกชนิด",
+    "cover": "/images/newest/thumbnails/โอม_13.webp"
+  },
+  {
     "title": "Gold Amulet — แหวนโบราณฝังพลอยแท้",
     "video": "/images/new work/Gold Amulet/Gold Amlet 6.mp4",
     "link": "/images/new work/Gold Amulet/Gold Amlet 6.mp4",
