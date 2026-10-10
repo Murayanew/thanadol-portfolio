@@ -54,8 +54,9 @@ export function CatalogSection(title, icon, items, gridId) {
     } else {
       const hasDirectVideo = Boolean(item.video);
       const isNewWork = Boolean(
-        (item.video && (item.video.includes('new work') || item.video.includes('newest'))) ||
-        (item.cover && (item.cover.includes('new work') || item.cover.includes('newest')))
+        item.watermark ||
+        (item.video && (item.video.includes('new work') || item.video.includes('newest') || item.video.includes('10.10.26'))) ||
+        (item.cover && (item.cover.includes('new work') || item.cover.includes('newest') || item.cover.includes('10.10.26')))
       );
       coverHtml = `
         <div class="relative overflow-hidden aspect-video bg-pop-navy border-3 border-black mb-4 group/media">

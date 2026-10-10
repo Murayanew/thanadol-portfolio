@@ -1,5 +1,50 @@
 export const videoWorks = [
   {
+    "title": "TK GOLD — ตรวจเช็คแบงก์ 100 ดอลลาร์ทองคำแท้ในกล่องไม้พรีเมียม",
+    "video": "/images/10.10.26/Tk Gold 14.mp4",
+    "link": "/images/10.10.26/Tk Gold 14.mp4",
+    "tags": ["Editor"],
+    "description": "ตัดต่อคลิปสั้นตรวจเช็คแบงก์ดอลลาร์ทองคำแท้ พิสูจน์เปอร์เซ็นต์ทองคำด้วยเครื่อง XRF มาตรฐาน ตรวจสอบชัดเจนทุกจุด",
+    "cover": "/images/10.10.26/thumbnails/Tk_Gold_14.webp",
+    "watermark": true
+  },
+  {
+    "title": "TK GOLD — ตรวจเช็คน้ำหนักและเปอร์เซ็นต์ทองนาฬิกาสายถักทองคำ",
+    "video": "/images/10.10.26/Tk Gold 13.mp4",
+    "link": "/images/10.10.26/Tk Gold 13.mp4",
+    "tags": ["Editor"],
+    "description": "ตัดต่อคลิปรีวิวการตรวจเช็คนาฬิกาสายถักทองคำแท้ วิเคราะห์เปอร์เซ็นต์ทองด้วยเครื่อง XRF และประเมินราคาจริงหน้าร้าน",
+    "cover": "/images/10.10.26/thumbnails/Tk_Gold_13.webp",
+    "watermark": true
+  },
+  {
+    "title": "โอม แอนทีค — ส่องปิ่นปักผมทองคำโบราณและตลับเงินถมทองทรงคุณค่า",
+    "video": "/images/10.10.26/โอม 14.mp4",
+    "link": "/images/10.10.26/โอม 14.mp4",
+    "tags": ["Editor"],
+    "description": "ตัดต่อคลิปพาส่องปิ่นปักผมทองคำโบราณและตลับเงินโบราณแกะสลักลวดลายวิจิตร มูลค่าหลายหมื่นบาท ที่ร้านโอมแอนทีค พันธุ์ทิพย์งามวงศ์วาน",
+    "cover": "/images/10.10.26/thumbnails/โอม_14.webp",
+    "watermark": true
+  },
+  {
+    "title": "Gold Amulet — ตอบข้อสงสัยเนื้อทองแท้ มีโลหะผสมอยู่จริงไหม?",
+    "video": "/images/10.10.26/Gold Amulet 1.mp4",
+    "link": "/images/10.10.26/Gold Amulet 1.mp4",
+    "tags": ["Editor"],
+    "description": "ตัดต่อคลิปตอบคำถามลูกค้า ไขข้อข้องใจเรื่องเปอร์เซ็นต์ทองคำและส่วนผสมของโลหะมีค่า สำหรับร้าน Gold Amulet",
+    "cover": "/images/10.10.26/thumbnails/Gold_Amulet_1.webp",
+    "watermark": true
+  },
+  {
+    "title": "Gold Amulet — ตรวจเช็คเปอร์เซ็นต์ทองคำแท้ ไม่ต้องเสียเวลาเดา",
+    "video": "/images/10.10.26/Gold Amulet 2(1).mp4",
+    "link": "/images/10.10.26/Gold Amulet 2(1).mp4",
+    "tags": ["Editor"],
+    "description": "ตัดต่อคลิปสั้นให้ความรู้และข้อแนะนำเกี่ยวกับการตรวจเช็คเปอร์เซ็นต์ทองคำแท้อย่างถูกต้องและแม่นยำ เพื่อความมั่นใจของลูกค้า",
+    "cover": "/images/10.10.26/thumbnails/Gold_Amulet_2_1_.webp",
+    "watermark": true
+  },
+  {
     "title": "TK GOLD — เจาะลึกตรวจสอบเส้นทองโบราณปริศนา",
     "video": "/images/newest/TK Gold 10(1).mp4",
     "link": "/images/newest/TK Gold 10(1).mp4",
